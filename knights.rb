@@ -23,8 +23,8 @@ class Knight
             
             if (x.between?(-7,7)) && (y.between?(-7,7)) && !@@used_positions.include?([x,y]) #shorten map for testing
                 @@used_positions << [x,y]
-                #@children << Knight.new([x,y], self)
-                current_node.children << Knight.new([x,y])
+                current_node.children << Knight.new([x,y], current_node)
+               #current_node.children << Knight.new([x,y])
 
                 
             end
